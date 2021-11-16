@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/db/ing.json"></script>
+	<title>EdaGen</title>
+</head>
+<body>
+	 <header class="header">
+		 <div class="container">
+		   <h1 class="logo">EdaGen</h1>
+		   <nav class="only_pc">
+		   	<a href="#main" onclick="window.load('#main', '_self');" class="menu">Главная</a>
+		    <a href="#generator" onclick="window.load('#generator', '_self');" class="menu">Генератор</a>
+		   	<a href="#about" onclick="window.load('#about', '_self');" class="menu">О сайте</a>
+		   </nav>
+			<div class="only_m">
+				<p>Меню</p>
+			</div>
+		</div>
+	 </header>
+
+	<div id="container" class="container"></div>
+
+
+	<template id="temp_main">
+		<div>
+	  	<p>Main page</p>
+		</div>
+	</template>
+
+	<template id="temp_generator">
+		<div>
+	  	<p>Generator page</p>
+			<div style="display: flex;">
+				<input id="count" type="range" min="4" max="15" value="4" class="slider" id="count"> <label id="count_value" for="count">Количество 4</label>
+				<input id="hot" type="checkbox" value="hot" class="checkbox"> <label for="hot">Острое</label>
+				<input id="vegan" type="checkbox" value="vegan" class="checkbox"> <label for="vegan">Без мяса</label>
+			</div>
+
+			<input onclick="button_start()" type="button" value="Начать" class="button">
+
+			<div id="gen_output" class="gen_output"/>
+		</div>
+	</template>
+
+	<template id="temp_about">
+		<div>
+			<p> About page</p>
+		</div>
+	</template>
+
+<script>//Навигация
+		window.onload = load(location.hash);
+
+	  async function load(hash){
+			const container = document.querySelector('#container');
+			container.innerHTML = '';
+
+			const temp_main = document.querySelector('#temp_main').content.cloneNode(true);
+			const temp_generator = document.querySelector('#temp_generator').content.cloneNode(true);
+			const temp_about = document.querySelector('#temp_about').content.cloneNode(true);
+
+			switch (hash) {
+				case "#main":
+					container.appendChild(temp_main);
+					break;
+				case "#generator":
+					container.appendChild(temp_generator);
+					const count = document.getElementById("count");
+					const  count_value = document.getElementById("count_value");
+					count.oninput = function() {
+							count_value.innerHTML = "Количество "+this.value+"";
+					};
+					break;
+				case "#about":
+					container.appendChild(temp_about);
+					break;
+				case "":
+					container.appendChild(temp_main);
+					location.hash = "main";
+					break;
+				default:
+					container.appendChild(temp_main);
+					window.load('#main', '_self');
+					location.hash = "main";
+					break;
+			}
+		}
+	</script>
+
+<script>//Старт генерации
+
+	function button_start(){
+		const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+		const output = document.querySelector('#gen_output');
+		output.innerHTML = '';
+		var out = edagen(count.value);
+		console.log(out)
+		for(var i in out) {
+		  output.append(''+out[i]+' ');
+		};
+	}
+
+	function chance(procent) {
+		var r = Math.floor(Math.random()*100);
+		if (procent>r) {return true} else {return false};
+	}
+
+	function filter(exception, tastes) {
+		exception.forEach((item) => {
+			console.log(item);
+			if (tastes.includes(item)){return false} else {return true};
+		});
+
+	}
+
+	function edagen(count){
+		//console.log(DATA)
+		let loop = count;
+		let max = {First: 2, Second: count/2, Linkage: count/4, Accent: count/2};
+		let debug = {iter: 0};
+		let setting = {filters: false}; //Привязать переключатель
+		let tastes = [];
+		let result = [];
+
+		while (loop > 0) {
+			++debug.iter;
+			let filt = false
+			if (chance(10)) {
+				var edatype = "First";
+			};
+			if (chance(50)) {
+				var edatype = "Second";
+			};
+			if (chance(20)) {
+				var edatype = "Linkage";
+			};
+			if (chance(20)) {
+				var edatype = "Accent";
+			};
+			if (edatype != undefined){
+				id = Math.floor(Math.random()*DATA[edatype].length);
+				if (max[edatype] > 0) {
+					if (DATA[edatype][id].exception != undefined){filt = filter(DATA[edatype][id].exception.split(","), tastes)} else {filt = true};
+					if (filt || setting.filter) {
+						if (!(result.includes(DATA[edatype][id].ru))) {
+							DATA[edatype][id].properties.split(",").forEach((item) => {tastes.push(item)});
+							result.push(DATA[edatype][id].ru);
+							--loop;
+							--max[edatype];
+						};
+					};
+				};
+			};
+		};
+		console.log(debug.iter)
+		return result;
+	}
+</script>
+</body>
+</html>

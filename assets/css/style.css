@@ -1,0 +1,99 @@
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: #222;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+
+input:focus-visible{
+	outline: none;
+}
+
+a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, text {margin: 0;}
+
+/*Мобильный вид*/
+@media (max-width: 768px) {
+	.only_pc{
+		display: none;
+	}
+  .header .container{
+    display: flex;
+    padding: .3rem 1rem;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+/*Широкоэкранный вид*/
+@media (min-width: 769px) {
+	.only_m{
+		display: none;
+	}
+  .header .container{
+    display: flex;
+    padding: .3rem 1rem;
+    align-items: center;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+body{
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #fff;
+	overflow: overlay;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-attachment: fixed;
+	content: '';
+  display: table;
+	align-items: center;
+	align-self: center;
+	scroll-behavior: smooth;
+	background: rgba(4,190,121,1);
+}
+.header{
+	background-color: rgb(10,10,10,0.2);
+	backdrop-filter: blur(8px);
+}
+.header .logo{
+  flex-grow: 1;
+}
+.only_pc .menu{
+	margin: 0 .8rem;
+}
+
+.container{
+	justify-content: space-around;
+	margin: 0 auto;
+	display: grid;
+	max-width: 90%;
+}
