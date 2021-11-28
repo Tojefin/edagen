@@ -8,96 +8,104 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;700&family=IBM+Plex+Serif:wght@100;300;400;600&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="assets/db/ing.json"></script>
 	<title>EdaGen</title>
 </head>
 <body>
-	 <header class="header">
-		 <div class="container">
-		   <h1 class="logo">EdaGen</h1>
-		   <nav class="only_pc">
-		   	<a href="#main" onclick="window.load('#main', '_self');" class="menu">Главная</a>
-		    <a href="#generator" onclick="window.load('#generator', '_self');" class="menu">Генератор</a>
-		   	<a href="#about" onclick="window.load('#about', '_self');" class="menu">О сайте</a>
-		   </nav>
-			<div class="only_m">
-				<p>Меню</p>
+	<header class="header">
+		<div class="container">
+			<h1 class="header__logo">EdaGen</h1>
+			<p class="header__text">Наш сайт предоставляет возможность найти новые, необычные сочетания продуктов используя генератор случайных ингредиентов.</p>
+		</div>
+	</header>
+
+	<section class="generator">
+		<h2 class="hide">Генератор</h2>
+		<div class="container">
+
+				<div class="generator__settings">
+					<h2 class="hide">Настройки</h2>
+					<div class="generator__count">
+						<div class="generator__count-row">
+							<label class="generator__count-label" for="count" id="count-value">Количество</label>
+							<span class="generator__count-value" id="count-value">4 шт.</span>
+						</div>
+						<input id="count" type="range" min="4" max="15" value="4" class="generator__count-range">
+					</div>
+
+					<div class="generator__filter">
+						<label for="filter" class="generator__filter-label">Фильтрация сочетаний</label>
+						<input id="filter" type="checkbox" name="filter" class="generator__filter-input" checked>
+					</div>
+
+					<div class="generator__type">
+						<ul class="generator__type-list">
+							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--soup" type="radio" name="type" value="soup" id="soup"></li>
+							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--garnish" type="radio" name="type" value="garnish" id="garnish" checked></li>
+							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--salad" type="radio" name="type" value="salad" id="salad"></li>
+							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--disert" type="radio" name="type" value="disert" id="disert"></li>
+						</ul>
+					</div>
+
+					<div class="generator__control">
+						<button class="generator__control-button" type="button" name="generator" id="generator">Генерировать</button>
+						<button class="generator__control-button" type="button" name="search" id="search">Найти рецепты</button>
+					</div>
+				</div>
+
+				<div class="generator__output">
+					<h2 class="hide">Вывод</h2>
+					<div class="generator__field">
+						<div class="generator__card">
+							<h3 class="generator__card-title group group--1">Курятина</h3>
+						</div>
+						<div class="generator__card">
+							<h3 class="generator__card-title group group--2">Картофель</h3>
+						</div>
+						<div class="generator__card">
+							<h3 class="generator__card-title group group--3">Оливковое масло</h3>
+						</div>
+						<div class="generator__card">
+							<h3 class="generator__card-title group group--4">Перец молотый</h3>
+						</div>
+					</div>
+
+				</div>
+
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<ul class="footer__list">
+				<li> <p class="footer__text footer__text--left">Сайт создан для развлечения и получения опыта разработки</p> </li>
+				<li> <p class="footer__text footer__text--right">Надеемся вам полезен этот сайт и вы нашли что-то новое для себя</p> </li>
+				<li> <p class="footer__text footer__text--left">Будьте в курсе наших новых проектов на сайте <a href="https://skyedge.xyz">skyedge.xyz</a></p> </li>
+			</ul>
+			<div class="footer__copyright">
+				<p>© skyedge.xyz</p>
 			</div>
 		</div>
-	 </header>
+	</footer>
 
-	<div id="container" class="container"></div>
+<script>
+	var countSection = 2;
+	var posView = 0;
+	var scrollwait = false;
+	document.addEventListener("mousewheel", function(e) {
+		event.preventDefault();
+		if (scrollwait == true) {return};
+		scrollwait = true;
+		if (event.deltaY == 100) {if ((posView+1)<=countSection){++posView;} else {posView = 0;}}
+		if (event.deltaY == -100) {if ((posView-1)>=0) {--posView;} else {posView = countSection;}}
+		window.scrollTo({top: window.innerHeight*posView, behavior: 'smooth'});
+		setTimeout(function () {scrollwait = false}, 400);
+	}, { passive: false })
+</script>
 
-
-	<template id="temp_main">
-		<div>
-	  	<p>Main page</p>
-		</div>
-	</template>
-
-	<template id="temp_generator">
-		<div>
-	  	<p>Generator page</p>
-			<div style="display: flex;">
-				<input id="count" type="range" min="4" max="15" value="4" class="slider" id="count"> <label id="count_value" for="count">Количество 4</label>
-				<input id="hot" type="checkbox" value="hot" class="checkbox"> <label for="hot">Острое</label>
-				<input id="vegan" type="checkbox" value="vegan" class="checkbox"> <label for="vegan">Без мяса</label>
-			</div>
-
-			<input onclick="button_start()" type="button" value="Начать" class="button">
-
-			<div id="gen_output" class="gen_output"/>
-		</div>
-	</template>
-
-	<template id="temp_about">
-		<div>
-			<p> About page</p>
-		</div>
-	</template>
-
-<script>//Навигация
-		window.onload = load(location.hash);
-
-	  async function load(hash){
-			const container = document.querySelector('#container');
-			container.innerHTML = '';
-
-			const temp_main = document.querySelector('#temp_main').content.cloneNode(true);
-			const temp_generator = document.querySelector('#temp_generator').content.cloneNode(true);
-			const temp_about = document.querySelector('#temp_about').content.cloneNode(true);
-
-			switch (hash) {
-				case "#main":
-					container.appendChild(temp_main);
-					break;
-				case "#generator":
-					container.appendChild(temp_generator);
-					const count = document.getElementById("count");
-					const  count_value = document.getElementById("count_value");
-					count.oninput = function() {
-							count_value.innerHTML = "Количество "+this.value+"";
-					};
-					break;
-				case "#about":
-					container.appendChild(temp_about);
-					break;
-				case "":
-					container.appendChild(temp_main);
-					location.hash = "main";
-					break;
-				default:
-					container.appendChild(temp_main);
-					window.load('#main', '_self');
-					location.hash = "main";
-					break;
-			}
-		}
-	</script>
-
-<script>//Старт генерации
+<script>//Генерация
 
 	function button_start(){
 		const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -115,9 +123,8 @@
 		if (procent>r) {return true} else {return false};
 	}
 
-	function filter(exception, tastes) {
+	async function filter(exception, tastes) {
 		exception.forEach((item) => {
-			console.log(item);
 			if (tastes.includes(item)){return false} else {return true};
 		});
 
@@ -125,6 +132,7 @@
 
 	function edagen(count){
 		//console.log(DATA)
+		let lang = localStorage.getItem('lang');
 		let loop = count;
 		let max = {First: 2, Second: count/2, Linkage: count/4, Accent: count/2};
 		let debug = {iter: 0};
@@ -152,12 +160,21 @@
 				if (max[edatype] > 0) {
 					if (DATA[edatype][id].exception != undefined){filt = filter(DATA[edatype][id].exception.split(","), tastes)} else {filt = true};
 					if (filt || setting.filter) {
-						if (!(result.includes(DATA[edatype][id].ru))) {
-							DATA[edatype][id].properties.split(",").forEach((item) => {tastes.push(item)});
-							result.push(DATA[edatype][id].ru);
-							--loop;
-							--max[edatype];
-						};
+						if(lang == "RU"){
+							if (!(result.includes(DATA[edatype][id].ru))) {
+								DATA[edatype][id].properties.split(",").forEach((item) => {tastes.push(item)});
+								result.push(DATA[edatype][id].ru);
+								--loop;
+								--max[edatype];
+							};
+						} else {
+							if (!(result.includes(DATA[edatype][id].en))) {
+								DATA[edatype][id].properties.split(",").forEach((item) => {tastes.push(item)});
+								result.push(DATA[edatype][id].en);
+								--loop;
+								--max[edatype];
+							};
+						}
 					};
 				};
 			};
