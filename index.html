@@ -29,10 +29,10 @@
 					<h2 class="hide">Настройки</h2>
 					<div class="generator__count">
 						<div class="generator__count-row">
-							<label class="generator__count-label" for="count" id="count-value">Количество</label>
-							<span class="generator__count-value" id="count-value">4 шт.</span>
+							<label class="generator__count-label" for="count">Количество</label>
+							<span class="generator__count-value" id="count-value" >4 шт.</span>
 						</div>
-						<input id="count" type="range" min="4" max="15" value="4" class="generator__count-range">
+						<input id="count" type="range" min="4" max="15" value="4" class="generator__count-range" oninput="updateTextInput(this.value);">
 					</div>
 
 					<div class="generator__filter">
@@ -42,22 +42,22 @@
 
 					<div class="generator__type">
 						<ul class="generator__type-list">
-							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--soup" type="radio" name="type" value="soup" id="soup"></li>
-							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--garnish" type="radio" name="type" value="garnish" id="garnish" checked></li>
-							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--salad" type="radio" name="type" value="salad" id="salad"></li>
-							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--disert" type="radio" name="type" value="disert" id="disert"></li>
+							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--soup" type="radio" name="type" value="soup" id="type"></li>
+							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--garnish" type="radio" name="type" value="garnish" id="type" checked></li>
+							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--salad" type="radio" name="type" value="salad" id="type"></li>
+							<li class="generator__type-item"><input class="generator__type-radio generator__type-radio--disert" type="radio" name="type" value="disert" id="type"></li>
 						</ul>
 					</div>
 
 					<div class="generator__control">
-						<button class="generator__control-button" type="button" name="generator" id="generator">Генерировать</button>
+						<button class="generator__control-button" type="button" name="generator" id="generator" onclick="button_start()">Генерировать</button>
 						<button class="generator__control-button" type="button" name="search" id="search">Найти рецепты</button>
 					</div>
 				</div>
 
 				<div class="generator__output">
 					<h2 class="hide">Вывод</h2>
-					<div class="generator__field">
+					<div class="generator__field" id="output">
 						<div class="generator__card">
 							<h3 class="generator__card-title group group--1">Курятина</h3>
 						</div>
@@ -105,16 +105,24 @@
 	}, { passive: false })
 </script>
 
+<script>
+	function updateTextInput(val) {document.getElementById('count-value').innerHTML=val+' шт.';}
+</script>
+
 <script>//Генерация
 
 	function button_start(){
-		const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-		const output = document.querySelector('#gen_output');
+		const count = document.querySelector('#count').value;
+		const filter = document.querySelector('#filter').checked;
+		const type = document.querySelector('#type:checked').value;
+		const output = document.querySelector('#output');
+		console.log(count, filter, type)
 		output.innerHTML = '';
-		var out = edagen(count.value);
-		console.log(out)
-		for(var i in out) {
-		  output.append(''+out[i]+' ');
+		var out = edagen(count, filter, type);
+		for(let i = 0; i < out.length; i++) {
+			setTimeout(() => {
+				output.innerHTML += out[i];
+			}, i*Math.floor(Math.random() * (400 - 100) + 100));
 		};
 	}
 
@@ -123,59 +131,94 @@
 		if (procent>r) {return true} else {return false};
 	}
 
-	async function filter(exception, tastes) {
-		exception.forEach((item) => {
-			if (tastes.includes(item)){return false} else {return true};
-		});
-
+	function randomitem(list) {
+		var id = Math.floor(Math.random()*list.length);
+		return list[id];
 	}
 
-	function edagen(count){
+	async function filter(data, test) {
+		data.forEach((item) => {
+			if (test.includes(item)){return false} else {return true};
+		});
+	}
+	function search(data, searched) {
+		var c = 0;
+		searched.forEach((item) => {
+			if (data.includes(item)){c++};
+		});
+		if (searched.length == c) {return true} else {return false};
+	}
+
+	function edagen(count, filt, type){
 		//console.log(DATA)
-		let lang = localStorage.getItem('lang');
+		let details;
+		let lang = 'RU';
 		let loop = count;
-		let max = {First: 2, Second: count/2, Linkage: count/4, Accent: count/2};
 		let debug = {iter: 0};
-		let setting = {filters: false}; //Привязать переключатель
 		let tastes = [];
 		let result = [];
-
+		let added = [];
+		if (filt == true) {
+			switch (type) {
+				case 'soup':
+					details = 'liquid' + ','+randomitem(['fruit', 'meat', 'veget', 'other'])
+					break;
+				case 'garnish':
+					details = randomitem(['garnish', 'baking']);
+					if (details == 'garnish') {
+						details += ','+randomitem(['veget', 'pasta', 'other']);
+				 	} else {
+						details += ','+randomitem(['fruit', 'meat', 'veget', 'other']);
+				 	}
+					break;
+				case 'salad':
+					details = 'salad' + ','+randomitem(['fruit', 'meat', 'veget'])
+					break;
+				case 'disert':
+					details = 'cakes'
+					break;
+			}
+			console.log(details);
+		}
 		while (loop > 0) {
 			++debug.iter;
-			let filt = false
+			if (debug.iter >= 100) {alert('У сайта беды с башкой. ¯\\_(ツ)_/¯'); return;};
 			if (chance(10)) {
 				var edatype = "First";
+				var edatypeNum = 1;
 			};
 			if (chance(50)) {
 				var edatype = "Second";
+				var edatypeNum = 2;
 			};
 			if (chance(20)) {
 				var edatype = "Linkage";
+				var edatypeNum = 3;
 			};
 			if (chance(20)) {
 				var edatype = "Accent";
+				var edatypeNum = 4;
 			};
 			if (edatype != undefined){
 				id = Math.floor(Math.random()*DATA[edatype].length);
-				if (max[edatype] > 0) {
-					if (DATA[edatype][id].exception != undefined){filt = filter(DATA[edatype][id].exception.split(","), tastes)} else {filt = true};
-					if (filt || setting.filter) {
-						if(lang == "RU"){
-							if (!(result.includes(DATA[edatype][id].ru))) {
-								DATA[edatype][id].properties.split(",").forEach((item) => {tastes.push(item)});
-								result.push(DATA[edatype][id].ru);
-								--loop;
-								--max[edatype];
-							};
-						} else {
-							if (!(result.includes(DATA[edatype][id].en))) {
-								DATA[edatype][id].properties.split(",").forEach((item) => {tastes.push(item)});
-								result.push(DATA[edatype][id].en);
-								--loop;
-								--max[edatype];
-							};
-						}
-					};
+					if (filt) {
+						if (DATA[edatype][id].exception != undefined){if (filter(DATA[edatype][id].exception.split(","), tastes) == false){continue}};
+						if (search(DATA[edatype][id].class.split(","), details.split(",")) == false){continue};
+					}
+					console.log(DATA[edatype][id]);
+					if(lang == "RU"){
+						if (!(added.includes(DATA[edatype][id].ru))) {
+							DATA[edatype][id].properties.split(",").forEach((item) => {tastes.push(item)});
+							added.push(DATA[edatype][id].ru)
+							result.push('<div class="generator__card"><h3 class="generator__card-title group group--'+edatypeNum+'">'+DATA[edatype][id].ru+'</h3></div>');
+							--loop;
+						};
+					} else {
+						if (!(result.includes(DATA[edatype][id].en))) {
+							DATA[edatype][id].properties.split(",").forEach((item) => {tastes.push(item)});
+							result.push(DATA[edatype][id].en);
+							--loop;
+						};
 				};
 			};
 		};

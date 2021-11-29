@@ -3,157 +3,182 @@ var DATA ={
 	{
 		"ru": "Яйца",
 		"en": "eggs",
-		"properties": "a7"
+		"properties": "a7",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Говядина(Мясо)",
 		"en": "Beef",
-		"properties": "a6,b9"
+		"properties": "a6,b9",
+		"class": "salat,baking,meat,veget"
 	},
 	{
 		"ru": "Бекон",
 		"en": "Bacon",
-		"properties": "a6,a3"
+		"properties": "a6,a3",
+		"class": "salat,meat"
 	},
 	{
 		"ru": "Ветчина",
 		"en": "Ham",
-		"properties": "a6,a3"
+		"properties": "a6,a3",
+		"class": "salat,meat"
 	},
 	{
 		"ru": "Свинина",
 		"en": "Pork",
-		"properties": "a6,b9"
+		"properties": "a6,b9",
+		"class": "salat,baking,meat,veget"
     },
 	{
 		"ru": "Фарш",
 		"en": "Minced meat",
-		"properties": "a6"
+		"properties": "a6",
+		"class": "baking,meat,veget"
 	},
 	{
 		"ru": "Телятина",
 		"en": "Veal",
-		"properties": "a6,a3,b9"
+		"properties": "a6,a3,b9",
+		"class": "salat,baking,meat,veget"
 	},
 	{
 		"ru": "Сосиски",
 		"en": "Sausages",
-		"properties": "a6,b6"
+		"properties": "a6,b6",
+		"class": "baking,meat,veget"
 	},
 	{
 		"ru": "Сардельки",
 		"en": "Sausages",
-		"properties": "a6,b6"
+		"properties": "a6,b6",
+		"class": "baking,meat,veget"
 	},
 	{
 		"ru": "Кролик",
 		"en": "Rabbit",
-		"properties": "a6,a1"
+		"properties": "a6,a1",
+		"class": "salat,baking,meat,veget"
 	},
 	{
         "ru": "Курица",
 		"en": "Chicken",
-		"properties": "a6"
+		"properties": "a6",
+		"class": "salat,baking,meat,veget"
 	},
 	{
         "ru": "Индейка",
 		"en": "Turkey",
-		"properties": "a6,a1"
+		"properties": "a6,a1",
+		"class": "salat,baking,meat,veget"
 	},
 	{
         "ru": "Гусь",
 		"en": "Goose",
-		"properties": "a6,a1"
+		"properties": "a6,a1",
+		"class": "salat,baking,meat,veget"
 	},
 	{
         "ru": "Утка",
 		"en": "Duck",
-		"properties": "a6,a1"
+		"properties": "a6,a1",
+		"class": "salat,baking,meat,veget"
 	},
 	{
         "ru": "Перепелка",
 		"en": "Quail",
-		"properties": "a6,a1"
+		"properties": "a6,a1",
+		"class": "salat,baking,meat,veget"
 	},
 	{
         "ru": "Рыба",
 		"en": "Fish",
-		"properties": "a3,a6,b13"
+		"properties": "a3,a6,b13",
+		"class": "salat,baking,meat,veget"
 	},
 	{
         "ru": "Селёдка",
 		"en": "Herring",
-		"properties": "a3,a6,b13"
+		"properties": "a3,a6,b13",
+		"class": "salat,meat,veget"
 	},
 	{
         "ru": "Шпроты",
 		"en": "Sprats",
-		"properties": "a3,a6,b9,b13"
+		"properties": "a3,a6,b9,b13",
+		"class": "salat,meat,veget"
 	},
 	{
         "ru": "Крабовые палочки",
 		"en": "Crab sticks",
-		"properties": "a7,b13"
-	},
-	{
-        "ru": "Икра",
-		"en": "Caviar",
-		"properties": "a4,a5"
+		"properties": "a7,b13",
+		"class": "salat,meat,veget"
 	},
 	{
         "ru": "Колбаса сырокопчёная",
 		"en": "Smoked sausage",
-		"properties": "a3,a5,b5"
+		"properties": "a3,a5,b5",
+		"class": "salat,meat,veget"
 	},
 	{
         "ru": "Колбаса докторская",
 		"en": "Sausage doctor",
-		"properties": "a6,a7"
+		"properties": "a6,a7",
+		"class": "salat,baking,meat,veget"
 	},
 	{
         "ru": "Колбаса копчёная",
 		"en": "Smoked sausage",
-		"properties": "a5,a3,b5"
+		"properties": "a5,a3,b5",
+		"class": "salat,meat,veget"
 	},
 	{
         "ru": "Колбаса полукопчёная",
 		"en": "Semi-smoked sausage",
-		"properties": "a5,a3,b5"
+		"properties": "a5,a3,b5",
+		"class": "salat,meat,veget"
 	},
 	{
         "ru": "Колбаса Салями",
 		"en": "Salami Sausage",
-		"properties": "a5,a3,b5"
+		"properties": "a5,a3,b5",
+		"class": "salat,meat,veget"
 	},
 	{
         "ru": "Горбуша",
 		"en": "Pink salmon",
-		"properties": "a3,a6,b13"
+		"properties": "a3,a6,b13",
+		"class": "salat,meat,veget"
 	},
 	{
         "ru": "Семга",
 		"en": "Salmon",
-		"properties": "a1,b13"
+		"properties": "a1,b13",
+		"class": "garnish,veget,other"
 	},
 	{
 		"ru": "Креветки",
 		"en": "Shrimp",
-		"properties": "a1,b13"
+		"properties": "a1,b13",
+		"class": "garnish,veget,other"
 	},
 	{
 		"ru": "Творог",
 		"en": "Cottage cheese",
-		"properties": "a7,a8"
+		"properties": "a7,a8",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Сливочное масло",
 		"en": "Butter",
-		"properties": "b6"
+		"properties": "b6",
+		"class": "baking,cakes,other"
     },
 	{
 		"ru": "Пломбир",
 		"en": "Plombir",
-		"properties": "a1,b9"
+		"properties": "a1,b9",
+		"class": "cakes"
 	}
 ],
 
@@ -161,436 +186,523 @@ var DATA ={
 	{
 		"ru": "Картофель",
 		"en": "Potato",
-		"properties": "a1,a7"
+		"properties": "a1,a7",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Помидор",
 		"en": "Tomat",
-		"properties": "a1,a2,b1"
+		"properties": "a1,a2,b1",
+		"class": "salat,baking,garnish,meat,veget,other"
     },
 	{
 
 		"ru": "Баклажан",
 		"en": "Eggplant",
 		"properties": "b5,b1",
-		"exception": "b3"
+		"exception": "b3",
+		"class": "salat,baking,garnish,meat,veget,other"
     },
 	{
 		"ru": "Морковь",
 		"en": "Carrot",
-		"properties": "a1,b1"
+		"properties": "a1,b1",
+		"class": "salat,baking,garnish,meat,veget,other"
     },
 	{
 		"ru": "Адыгейский сыр",
 		"en": "Adyghe cheese",
 		"properties": "a8,b5,a3,b11",
-		"exception": "a1,b3,b4"
+		"exception": "a1,b3,b4",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Зеленый лук",
 		"en": "Green onions",
-		"properties": "a5,b2,b5"
+		"properties": "a5,b2,b5",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Лук",
 		"en": "Onion",
-		"properties": "a7,b1"
+		"properties": "a7,b1",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Зеленый салат",
 		"en": "Green salad",
-		"properties": "a1,b2"
+		"properties": "a1,b2",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Белокочанная капуста",
 		"en": "White cabbage",
-		"properties": "a1,b2"
+		"properties": "a1,b2",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Брюссельская капуста",
 		"en": "Brussels sprouts",
-		"properties": "a1,b7,b2"
+		"properties": "a1,b7,b2",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Свекла",
 		"en": "Beet",
-		"properties": "a1,b1"
+		"properties": "a1,b1",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Брюква",
 		"en": "Rutabaga",
-		"properties": "a1,b2"
+		"properties": "a1,b2",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Тыква",
 		"en": "Pumpkin",
-		"properties": "a1,b1"
+		"properties": "a1,b1",
+		"class": "garnish,meat,veget,other"
 	},
 	{
 		"ru": "Огурец",
 		"en": "Cucumber",
-		"properties": "b1"
+		"properties": "b1",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Кукуруза",
 		"en": "Corn",
-		"properties": "a1,b1"
+		"properties": "a1,b1",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Редис",
 		"en": "Radish",
-		"properties": "a5,b1"
+		"properties": "a5,b1",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Яблоки",
 		"en": "Apples",
-		"properties": "a1,a2,b3"
+		"properties": "a1,a2,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Апесльсины",
 		"en": "Apeslsins",
-		"properties": "a1,a2,b4,b3"
+		"properties": "a1,a2,b4,b3",
+		"class": "liquid,fruit",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Хурма",
 		"en": "Persimmon",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Грейпфрут",
 		"en": "Grapefruit",
-		"properties": "a4,a1,a2,b4,b3"
+		"properties": "a4,a1,a2,b4,b3",
+		"class": "liquid,fruit"
 	},
 	{
 		"ru": "Лимоны",
 		"en": "Lemons",
-		"properties": "a2,b4,b3"
+		"properties": "a2,b4,b3",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Оливки",
 		"en": "Olives",
-		"properties": "a3,b1"
+		"properties": "a3,b1",
+		"class": "salad,garnish,meat,veget"
 	},
 	{
 		"ru": "Шоколад тёмный",
 		"en": "Dark chocolate",
-		"properties": "a4"
+		"properties": "a4",
+		"class": "cakes"
 	},
 	{
 		"ru": "Шоколад молочный",
 		"en": "Milk chocolate",
-		"properties": "a1"
+		"properties": "a1",
+		"class": "cakes"
 	},
 	{
 		"ru": "Шоколад белый",
 		"en": "White chocolate",
-		"properties": "a1"
+		"properties": "a1",
+		"class": "cakes"
 	},
 	{
 		"ru": "Печенье",
 		"en": "Cookie",
-		"properties": "a1,a7"
+		"properties": "a1,a7",
+		"class": "cakes"
 	},
 	{
 		"ru": "Крекер",
 		"en": "Cracker",
-		"properties": "a3,a7"
+		"properties": "a3,a7",
+		"class": "cakes"
 	},
 	{
 		"ru": "Банан",
 		"en": "Banana",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Авокадо",
 		"en": "Avocado",
-		"properties": "a7,b3"
+		"properties": "a7,b3",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Ананас",
 		"en": "Pineapple",
-		"properties": "a1,a2,b3"
+		"properties": "a1,a2,b3",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Гранат",
 		"en": "Pomegranate",
-		"properties": "a1,a2,b3"
+		"properties": "a1,a2,b3",
+		"class": "liquid,fruit"
 	},
 	{
 		"ru": "Лайм",
 		"en": "Lime",
-		"properties": "a2,a1,b4,b3"
+		"properties": "a2,a1,b4,b3",
+		"class": "liquid,fruit"
 	},
 	{
 		"ru": "Груша",
 		"en": "Pear",
-		"properties": "a1,b7,b3"
+		"properties": "a1,b7,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Мандарин",
 		"en": "Mandarin",
-		"properties": "a1,a2,b4,b3"
+		"properties": "a1,a2,b4,b3",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Абрикос",
 		"en": "Apricot",
-		"properties": "a2,a1,b6,b3"
+		"properties": "a2,a1,b6,b3",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Персик",
 		"en": "Peach",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Киви",
 		"en": "Kiwi",
-		"properties": "a2,b3"
+		"properties": "a2,b3",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Слива",
 		"en": "Plum",
-		"properties": "a1,a2,b3"
+		"properties": "a1,a2,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Вишня",
 		"en": "Cherry",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Черешня",
 		"en": "Merry",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Виноград",
 		"en": "Grape",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "cakes,liquid,fruit"
 	},
 	{
 		"ru": "Изюм",
 		"en": "Raisin",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Финики",
 		"en": "Dates",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Клубника",
 		"en": "Strawberry",
-		"properties": "a1,a2,b3"
+		"properties": "a1,a2,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Земляника",
 		"en": "Strawberry",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Малина",
 		"en": "Raspberry",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Брусника",
 		"en": "Lingonberry",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Клюква",
 		"en": "Cranberry",
-		"properties": "a2,b3"
+		"properties": "a2,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Черника",
 		"en": "Blueberries",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Голубика",
 		"en": "Blueberry",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Барбарис",
 		"en": "Barberry",
-		"properties": "a1,a2,b3"
+		"properties": "a1,a2,b3",
+		"class": "baking,cakes,liquid,fruit"
 	},
 	{
 		"ru": "Смородина чёрная",
 		"en": "Black currant",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Смородина красная",
 		"en": "Red currant",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Бузина",
 		"en": "Elderberry",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "liquid,fruit"
 	},
 	{
 		"ru": "Ежевика",
 		"en": "Blackberry",
-		"properties": "a1,b3"
+		"properties": "a1,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Рябина",
 		"en": "Ashberry",
-		"properties": "a2,a1"
+		"properties": "a2,a1",
+		"class": "liquid,fruit"
 	},
 	{
 		"ru": "Крыжовник",
 		"en": "Gooseberry",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Смородина белая",
 		"en": "White currant",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "baking,liquid,fruit"
     },
 	{
 		"ru": "Облепиха",
 		"en": "Sea-buckthorn",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "baking,liquid,fruit"
 	},
 	{
 		"ru": "Мёд",
 		"en": "Honey",
-		"properties": "a1,a7"
+		"properties": "a1,a7",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Арахис",
 		"en": "Peanut",
-		"properties": "a3,b7"
+		"properties": "a3,b7",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Грецкий орех",
 		"en": "Walnut",
-		"properties": "a4,b7"
+		"properties": "a4,b7",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Каштан",
 		"en": "Chestnut",
-		"properties": "a4,b7"
+		"properties": "a4,b7",
+		"class": "garnish,meat,veget,other"
 	},
 	{
 		"ru": "Кокос",
 		"en": "Coconut",
-		"properties": "a7,b7"
+		"properties": "a7,b7",
+		"class": "cakes"
 	},
 	{
 		"ru": "Миндаль",
 		"en": "Almonds",
-		"properties": "a1,b7"
+		"properties": "a1,b7",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Мускатный орех",
 		"en": "Nutmeg",
-		"properties": "a5,b7"
+		"properties": "a5,b7",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Фисташки",
 		"en": "Pistachios",
-		"properties": "a1,b7"
+		"properties": "a1,b7",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Фундук",
 		"en": "Hazelnuts",
-		"properties": "a1,b7"
+		"properties": "a1,b7",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Шиповник",
 		"en": "Rosehip",
-		"properties": "a2,a1,b3"
+		"properties": "a2,a1,b3",
+		"class": "liquid,fruit"
 	},
 	{
 		"ru": "Фасоль",
 		"en": "Beans",
-		"properties": "a7,b6,b1"
+		"properties": "a7,b6,b1",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Горох",
 		"en": "Peas",
-		"properties": "a7,b1"
+		"properties": "a7,b1",
+		"class": "salad,garnish,meat,veget"
 	},
 	{
 		"ru": "Пармезан",
 		"en": "Parmesan",
-		"properties": "a5,a3,b3,b7"
+		"properties": "a5,a3,b3,b7",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Моцарелла",
 		"en": "Mozzarella",
-		"properties": "a8"
+		"properties": "a8",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Камамбер",
 		"en": "Camembert",
-		"properties": "a1,a5"
+		"properties": "a1,a5",
+		"class": "salad,garnish,meat,veget,other"
 
 	},
 	{
 		"ru": "Горгондзола",
 		"en": "Gorgonzola",
-		"properties": "b6"
+		"properties": "b6",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Сливочный сыр",
 		"en": "Cream cheese",
-		"properties": "a3,b6"
+		"properties": "a3,b6",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Чеддер",
 		"en": "Cheddar",
-		"properties": "a5,a2,b7,b6"
+		"properties": "a5,a2,b7,b6",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Брынза",
 		"en": "Cheese",
-		"properties": "a8,a3"
+		"properties": "a8,a3",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Рокфор",
 		"en": "Roquefort",
-		"properties": "a5,a3"
+		"properties": "a5,a3",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Плавленый сыр",
 		"en": "Processed cheese",
-		"properties": "a3,b6"
+		"properties": "a3,b6",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Копчёный сыр",
 		"en": "Smoked cheese",
-		"properties": "a8,b12"
+		"properties": "a8,b12",
+		"class": "salad,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Манго",
 		"en": "Mango",
-		"properties": "a1,a2,b3"
+		"properties": "a1,a2,b3",
+		"class": "liquid,fruit"
 	},
 	{
 		"ru": "Чернослив",
 		"en": "Prunes",
-		"properties": "a1,a2,b3"
+		"properties": "a1,a2,b3",
+		"class": "liquid,fruit"
 	},
 	{
 		"ru": "Шампиньоны",
 		"en": "Champignons",
-		"properties": "a7,"
+		"properties": "a7,",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Тесто",
 		"en": "Dough",
-		"properties": "a7"
+		"properties": "a7",
+		"class": "baking,cakes,other"
 	},
 	{
 		"ru": "Макароны",
 		"en": "Pasta",
-		"properties": "a7"
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
 	}
 ],
 
@@ -598,118 +710,142 @@ var DATA ={
 	{
 		"ru": "Оливковое масло",
 		"en": "Olive oil",
-		"properties": "a4,a1,a3,a2"
+		"properties": "a4,a1,a3,a2",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Майонез",
 		"en": "Mayonnaise",
-		"properties": "a4,a2,a3"
+		"properties": "a4,a2,a3",
+		"class": "salat,baking,garnish,meat,veget,other"
+
     },
 	{
 		"ru": "Аджика",
 		"en": "Adjika",
-		"properties": "a5,b5"
+		"properties": "a5,b5",
+		"class": "baking,garnish,meat,veget,other"
 
 	},
 	{
 		"ru": "Горчица",
 		"en": "Mustard",
-		"properties": "a4"
+		"properties": "a4",
+		"class": "baking,garnish,meat,veget,other"
     },
 	{
 		"ru": "Кетчуп",
 		"en": "Ketchup",
-		"properties": "a2,b5,a5"
+		"properties": "a2,b5,a5",
+		"class": "baking,garnish,meat,veget,other"
     },
 	{
 		"ru": "Соевый соус",
 		"en": "Soy sauce",
-		"properties": "a3,a1,a4"
+		"properties": "a3,a1,a4",
+		"class": "baking,garnish,meat,veget,other"
     },
 	{
 		"ru": "Сырный соус",
 		"en": "Cheese sauce",
-		"properties": "b11,b6"
+		"properties": "b11,b6",
+		"class": "baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Чесночный соус",
 		"en": "Garlic sauce",
-		"properties": "a5,b5"
+		"properties": "a5,b5",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Цезарь",
 		"en": "Caesar",
-		"properties": "a3,a2,b6"
+		"properties": "a3,a2,b6",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Барбекю",
 		"en": "Barbecue",
-		"properties": "a5,a2,a1"
+		"properties": "a5,a2,a1",
+		"class": "garnish,veget,other"
 	},
 	{
 		"ru": "Тартар",
 		"en": "Tartarus",
-		"properties": "a5,a2"
+		"properties": "a5,a2",
+		"class": "garnish,veget,other"
 	},
 	{
 		"ru": "Соус с грибами",
 		"en": "Sauce with mushrooms",
-		"properties": "a3,a2,b6"
+		"properties": "a3,a2,b6",
+		"class": "salat,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Терияки",
 		"en": "Teriyaki",
-		"properties": "a1,a2"
+		"properties": "a1,a2",
+		"class": "garnish,veget,other"
 	},
 	{
 		"ru": "Чили",
 		"en": "Chile",
-		"properties": "a5"
+		"properties": "a5",
+		"class": "garnish,veget,other"
     },
 	{
 		"ru": "Карри",
 		"en": "Curry",
-		"properties": "b6,a2"
+		"properties": "b6,a2",
+		"class": "garnish,veget,other"
 	},
 	{
 		"ru": "Заправка по корейски для овощей",
 		"en": "Korean dressing for vegetables",
-		"properties": "a2,a5"
+		"properties": "a2,a5",
+		"class": "salat,meat,veget"
 	},
 	{
 		"ru": "Сметана",
 		"en": "Sour cream",
-		"properties": "a2,a8"
+		"properties": "a2,a8",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Ряженка",
 		"en": "Ryazhenka",
-		"properties": "a1,a2,a8"
+		"properties": "a1,a2,a8",
+		"class": "baking,cakes,fruit,other"
     },
 	{
 		"ru": "Сгущённое молоко",
 		"en": "Condensed milk",
-		"properties": "a1,a8"
+		"properties": "a1,a8",
+		"class": "baking,cakes,fruit,other"
 	},
 	{
 		"ru": "Кефир",
 		"en": "Kefir",
-		"properties": "a2,a8"
+		"properties": "a2,a8",
+		"class": "baking,cakes,fruit,other"
 	},
 	{
 		"ru": "Йогурт",
 		"en": "Yogurt",
-		"properties": "a2,a8"
+		"properties": "a2,a8",
+		"class": "baking,cakes,fruit,other"
 	},
 	{
 		"ru": "Сливки",
 		"en": "Cream",
-		"properties": "a1,a8"
+		"properties": "a1,a8",
+		"class": "baking,cakes,fruit,other"
     },
 	{
 		"ru": "Молоко",
 		"en": "Milk",
-		"properties": "a1,a7"
+		"properties": "a1,a7",
+		"class": "baking,cakes,fruit,other"
 	}
 ],
 
@@ -718,69 +854,82 @@ var DATA ={
 		"ru": "Чёрный перец",
 		"en": "Black pepper",
 		"properties": "a5,a4,b5",
-        "exception": "a1,b3,b4"
+        "exception": "a1,b3,b4",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Соль",
 		"en": "Salt",
-		"properties": "a3"
+		"properties": "a3",
+		"class": "salat,baking,garnish,meat,veget,other"
     },
 	{
 
 		"ru": "Гвоздика",
 		"en": "Carnation",
 		"properties": "b5",
-        "exception": "a1,b3,b4"
+        "exception": "a1,b3,b4",
+		"class": "salat,baking,garnish,meat,veget,other"
     },
 	{
 		"ru": "Красный перец",
 		"en": "Red pepper",
-		"properties": "a5"
+		"properties": "a5",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Кофе",
 		"en": "Coffee",
-		"properties": "a4,a7"
+		"properties": "a4,a7",
+		"class": "cakes"
 	},
 	{
 		"ru": "Какао",
 		"en": "Cocoa",
-		"properties": "a1,a7"
+		"properties": "a1,a7",
+		"class": "baking,cakes,other"
     },
 	{
 		"ru": "Лавровый лист",
 		"en": "Bay leaf",
-		"properties": "a4,b5,b2"
+		"properties": "a4,b5,b2",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Паприка",
 		"en": "Paprika",
-		"properties": "a1,a5"
+		"properties": "a1,a5",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Базилик",
 		"en": "Basil",
-		"properties": "a4,b2,b5"
+		"properties": "a4,b2,b5",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Имбирь",
 		"en": "Ginger",
-		"properties": "a5"
-		},
+		"properties": "a5",
+		"class": "salat,baking,garnish,meat,veget,other"
+    },
 	{
 		"ru": "Чеснок",
 		"en": "Garlic",
-		"properties": "a4,a5,b1"
+		"properties": "a4,a5,b1",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Петрушка",
 		"en": "Punch",
-		"properties": "a1,b2,b5"
+		"properties": "a1,b2,b5",
+		"class": "salat,baking,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Укроп",
 		"en": "Dill",
-		"properties": "b5,b2"
+		"properties": "b5,b2",
+		"class": "salat,baking,garnish,meat,veget,other"
 	}
 ]
 };
