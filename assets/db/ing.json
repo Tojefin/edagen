@@ -193,7 +193,7 @@ var DATA ={
 		"ru": "Помидор",
 		"en": "Tomat",
 		"properties": "a1,a2,b1",
-		"class": "salat,baking,garnish,meat,veget,other"
+		"class": "salat,baking,liquid,garnish,meat,veget,other"
     },
 	{
 
@@ -207,7 +207,7 @@ var DATA ={
 		"ru": "Морковь",
 		"en": "Carrot",
 		"properties": "a1,b1",
-		"class": "salat,baking,garnish,meat,veget,other"
+		"class": "salad,baking,liquid,garnish,meat,veget,other"
     },
 	{
 		"ru": "Адыгейский сыр",
@@ -232,25 +232,25 @@ var DATA ={
 		"ru": "Зеленый салат",
 		"en": "Green salad",
 		"properties": "a1,b2",
-		"class": "salat,garnish,meat,veget,other"
+		"class": "salat,garnish,liquid,meat,veget,other"
 	},
 	{
 		"ru": "Белокочанная капуста",
 		"en": "White cabbage",
 		"properties": "a1,b2",
-		"class": "salat,baking,garnish,meat,veget,other"
+		"class": "salat,baking,liquid,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Брюссельская капуста",
 		"en": "Brussels sprouts",
 		"properties": "a1,b7,b2",
-		"class": "salat,garnish,meat,veget,other"
+		"class": "salat,garnish,liquid,meat,veget,other"
 	},
 	{
 		"ru": "Свекла",
 		"en": "Beet",
 		"properties": "a1,b1",
-		"class": "salat,garnish,meat,veget,other"
+		"class": "salat,garnish,liquid,,meat,veget,other"
 	},
 	{
 		"ru": "Брюква",
@@ -268,7 +268,7 @@ var DATA ={
 		"ru": "Огурец",
 		"en": "Cucumber",
 		"properties": "b1",
-		"class": "salat,garnish,meat,veget,other"
+		"class": "salat,garnish,liquid,meat,veget,other"
 	},
 	{
 		"ru": "Кукуруза",
@@ -359,7 +359,7 @@ var DATA ={
 		"ru": "Авокадо",
 		"en": "Avocado",
 		"properties": "a7,b3",
-		"class": "cakes,liquid,fruit"
+		"class": "salad,garnish,meat,veget"
 	},
 	{
 		"ru": "Ананас",
@@ -538,8 +538,7 @@ var DATA ={
 	{
 		"ru": "Облепиха",
 		"en": "Sea-buckthorn",
-		"properties": "a2,a1,b3",
-		"class": "baking,liquid,fruit"
+		"properties": "a2,a1,b3"
 	},
 	{
 		"ru": "Мёд",
@@ -703,6 +702,120 @@ var DATA ={
 		"en": "Pasta",
 		"properties": "a7",
 		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Капеллини",
+		"en": "Capellini",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Вермишель",
+		"en": "Vermicelli",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Спагетти",
+		"en": "Spaghetti",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Спагеттини",
+		"en": "Spaghettini",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Спагеттони",
+		"en": "Spaghettoni",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Букатини",
+		"en": "Bucatini",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Маккерончини",
+		"en": "Maccheroncini",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Баветте",
+		"en": "Bavette",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Лингуине",
+		"en": "Linguine",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Феттучине",
+		"en": "Fettuccine",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Тальятелле",
+		"en": "Tagliatelle",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Паппарделле",
+		"en": "Pappardelle",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Мафальдине",
+		"en": "Mafaldine",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Фузилли(Спирали)",
+		"en": "Fusilli",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Джирандоле",
+		"en": "Girandole",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Пенне ригате(Перья)",
+		"en": "Penne rigate",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Пипе ригате(Улитки)",
+		"en": "Pipe rigate",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Фарфалле(Бабочки)",
+		"en": "Farfalle",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
+	},
+	{
+		"ru": "Конкильони(Большие ракушки)",
+		"en": "Conchiglioni",
+		"properties": "a7",
+		"class": "garnish,veget,pasta,other"
 	}
 ],
 
@@ -718,7 +831,7 @@ var DATA ={
 		"en": "Mayonnaise",
 		"properties": "a4,a2,a3",
 		"class": "salat,baking,garnish,meat,veget,other"
-
+		
     },
 	{
 		"ru": "Аджика",
@@ -923,13 +1036,13 @@ var DATA ={
 		"ru": "Петрушка",
 		"en": "Punch",
 		"properties": "a1,b2,b5",
-		"class": "salat,baking,garnish,meat,veget,other"
+		"class": "salat,baking,liquid,garnish,meat,veget,other"
 	},
 	{
 		"ru": "Укроп",
 		"en": "Dill",
 		"properties": "b5,b2",
-		"class": "salat,baking,garnish,meat,veget,other"
+		"class": "salat,baking,liquid,garnish,meat,veget,other"
 	}
 ]
 };
