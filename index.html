@@ -161,14 +161,14 @@
 		if (filt == true) {
 			switch (type) {
 				case 'soup':
-					details = 'liquid' + ','+randomitem(['fruit', 'meat', 'veget', 'other'])
+					details = 'liquid' + ','+randomitem(['fruit', 'meat', 'veget'])
 					break;
 				case 'garnish':
 					details = randomitem(['garnish', 'baking']);
 					if (details == 'garnish') {
-						details += ','+randomitem(['veget', 'pasta', 'other']);
+						details += ','+randomitem(['veget', 'pasta']);
 				 	} else {
-						details += ','+randomitem(['fruit', 'meat', 'veget', 'other']);
+						details += ','+randomitem(['fruit', 'meat', 'veget']);
 				 	}
 					break;
 				case 'salad':
@@ -182,28 +182,28 @@
 		}
 		while (loop > 0) {
 			++debug.iter;
-			if (debug.iter >= 100) {alert('У сайта беды с башкой. ¯\\_(ツ)_/¯'); return;};
-			if (chance(10)) {
+			if (debug.iter >= 1000) {alert('У сайта беды с башкой. ¯\\_(ツ)_/¯'); return;};
+			if (chance(20)) {
 				var edatype = "First";
 				var edatypeNum = 1;
 			};
-			if (chance(50)) {
+			if (chance(40)) {
 				var edatype = "Second";
 				var edatypeNum = 2;
 			};
-			if (chance(20)) {
+			if (chance(30)) {
 				var edatype = "Linkage";
 				var edatypeNum = 3;
 			};
-			if (chance(20)) {
+			if (chance(10)) {
 				var edatype = "Accent";
 				var edatypeNum = 4;
 			};
 			if (edatype != undefined){
 				id = Math.floor(Math.random()*DATA[edatype].length);
 					if (filt) {
-						if (DATA[edatype][id].exception != undefined){if (filter(DATA[edatype][id].exception.split(","), tastes) == false){continue}};
-						if (search(DATA[edatype][id].class.split(","), details.split(",")) == false){continue};
+						if (DATA[edatype][id].exception != undefined){if (filter(DATA[edatype][id].exception.split(","), tastes) == false){continue;}};
+						if (search(DATA[edatype][id].class.split(","), details.split(",")) == false){continue;};
 					}
 					console.log(DATA[edatype][id]);
 					if(lang == "RU"){
